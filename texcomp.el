@@ -588,7 +588,7 @@ The cdr part of elements represents the argument string of the environment.")
     ("lstinputlisting" . "[]")
 
     ;; pgf/tikZ
-    ("foreach" . "xxx in [,...,]")
+    ("foreach" . "\\xxx in {,...,}")
     ("draw" "[] () .. controls +(0,0) and +(0,0) .. ()" ";")
     ("matrix" . "[matrix of nodes, nodes in empty cells, row/column sep,text height/depth/width, anchor/align, ampersand replacement=\\&]\n")
     ("node" "[] at () {}" ";")

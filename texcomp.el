@@ -22,7 +22,7 @@
 ;;-------------------------------------------------------------------
 ;; Author: Shuji Narazaki <shuji.narazaki@gmail.com>
 ;; Created: 2018-06-16
-;; Version: 1.2.20
+;; Version: 1.2.21
 ;; Keywords: tex, conevience
 ;;
 ;;; Commentary:
@@ -532,6 +532,7 @@ The cdr part of elements represents the argument string of the environment.")
     ("usepackage" . "")
     ("vector" . "(X,Y)")
     ("verb")
+    ("hfill")
     ("vline")
     ("vspace" . "")
     ("vspace*" . "")

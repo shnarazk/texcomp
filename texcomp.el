@@ -599,7 +599,7 @@ The cdr part of elements represents the argument string of the environment.")
     ("usetikzlibrary" . "")
     ("visible" . "<>")
     ("url" . "")
-    ("href" "{}{\\bearmagotobutton{}}" "")
+    ("href" "{}{\\beamergotobutton{}}" "")
 
     ;; tcolorbox
     ("tcblower")
@@ -636,7 +636,7 @@ the symbol.")
 (load (expand-file-name "~/.texcomp.el") 'noerror)
 
 ;; Bind commands to keys if they aren't bound to any key yet.
-(mapcar
+(mapc
  (function (lambda (list)
 	     (let ((map (symbol-value (car (cdr list))))
 		   (keys (car (cdr (cdr list))))
@@ -1093,7 +1093,7 @@ If the depth is right but the count is not used up, nil is returned."
 		   ((< inc 0)		; backward
 		   (if (string= name (car namelist))
 		       (setq namelist (cdr namelist))
-		     (error)))
+		     (error "fail to search backward")))
 		   (t (error "Unmatched environment: %s" name))))
 	    ((eq (char-after (match-beginning 1)) ?e)
 	     (cond ((and (null namelist) (= count 1))
@@ -1101,7 +1101,7 @@ If the depth is right but the count is not used up, nil is returned."
 		   ((< 0 inc)
 		    (if (string=  name (car namelist))
 			(setq namelist (cdr namelist))
-		      (error)))
+		      (error "fail to search forward")))
 		   ((< inc 0)		; backward
 		    (setq namelist (cons name namelist)))))
 	    (t

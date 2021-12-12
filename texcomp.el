@@ -22,7 +22,7 @@
 ;;-------------------------------------------------------------------
 ;; Author: Shuji Narazaki <shuji.narazaki@gmail.com>
 ;; Created: 2018-06-16
-;; Version: 1.2.21
+;; Version: 1.2.22
 ;; Keywords: tex, conevience
 ;;
 ;;; Commentary:
@@ -600,6 +600,7 @@ The cdr part of elements represents the argument string of the environment.")
     ("visible" . "<>")
     ("url" . "")
     ("href" "{}{\\beamergotobutton{}}" "")
+    ("textcolor" . "{}")
 
     ;; tcolorbox
     ("tcblower")
@@ -633,7 +634,8 @@ part of the pairs is either nil or string. If it is nil, then the symbol
 does not acept any argument. If it is null string, the symbol requires
 only 1 argument. Otherwise, it is the template string of the argument of
 the symbol.")
-(load (expand-file-name "~/.texcomp.el") 'noerror)
+
+;; (load (expand-file-name "~/.texcomp.el") 'noerror)
 
 ;; Bind commands to keys if they aren't bound to any key yet.
 (mapc
